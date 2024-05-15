@@ -1,7 +1,14 @@
 #!/bin/bash
 
+# Install dependencies
+npm install
 # Step 1: Install uvicorn
 pip install uvicorn
+
+# Start the FastAPI application using Uvicorn
+uvicorn main:app --host 0.0.0.0 --port $PORT
+
+
 
 # Step 2: Install truffle
 npm install -g truffle
